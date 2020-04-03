@@ -75,4 +75,79 @@ while game_on:
             else:
                 fichas = fichas - aposta4
                 print('Você perdeu {0} fichas em Twelve!'.format(aposta4))
+
+
+        if pergunta1 == 'n' and pergunta2 == 'n' and pergunta3 == 'n' and pergunta4 == 'n':
+            sair = (input('Você quer sair do jogo ou esperar a próxima rodada?(sair/esperar: '))
+            if sair == 'sair':
+                print('Fim de Jogo')
+                break
+            else:
+                continue
+            
+        
+        #Pass Line Bet
+        if pergunta1 == 'n' or pergunta1 == 'nao':
+            pass
+        else:
+            if soma1 == 7 or soma1 == 11:
+                fichas = fichas + aposta1
+                print('Você ganhou {0} fichas em Pass Line Bet!'.format(aposta1))
+            elif soma1 == 2 or soma1 == 3 or soma1 == 12:
+                fichas = fichas - aposta1
+                print('Você perdeu {0} fichas em Pass Line Bet!'.format(aposta1))
+            else:
+                Point = True
+                while Point:
+                    print('Você está na fase Point!')
+                    print ('Você possui {0} fichas.'.format(fichas))
+                    dado3 = random.randint(1,6)
+                    dado4 = random.randint(1,6)
+                    soma2 = dado3 + dado4
+                    pergunta5 = input('Você quer apostar em Field?(s/n): ')
+                    if pergunta5 == 'n' or pergunta5 == 'não':
+                        pass
+                    else:
+                        aposta5 = int(input('Quantas fichas você quer apostar em Field? '))
+                    pergunta6 = input('Você quer apostar em Any Craps?(s/n): ')
+                    if pergunta6 == 'n' or pergunta6 == 'não':
+                        pass
+                    else:
+                        aposta6 = int(input('Quantas fichas você quer apostar em Any Craps? '))
+                    pergunta7 = input('Você quer apostar em Twelve?(s/n): ')
+                    if pergunta7 == 'n' or pergunta7 == 'não':
+                        pass
+                    else:
+                        aposta7 = int(input('Quantas fichas você quer apostar em Twelve? '))
+                    print('No primeiro dado saiu o número {0}.'.format(dado3))
+                    print('No segundo dado saiu o número {0}.'.format(dado4))
+                    print('A soma dos dois dados é {0}.'.format(soma2))
+
+                    #Field
+                    if pergunta5 == 'n':
+                        pass
+                    else:
+                        if 5<=soma2<=8:
+                            fichas = fichas - aposta5
+                            print('Você perdeu {0} fichas em Field!'.format(aposta5))
+                        elif 3<=soma2<=4 or 9<=soma2<=11:
+                            fichas = fichas + aposta5
+                            print('Você ganhou {0} fichas em Field!'.format(aposta5))
+                        elif soma2==2:
+                            fichas = fichas + 2*aposta5
+                            print('Você ganhou {0} fichas em Field!'.format(2*aposta5))
+                        else:
+                            fichas = fichas + 3*aposta5
+                            print('Você ganhou {0} fichas em Field!'.format(3*aposta5))
+
+                    #Any Craps
+                    if pergunta6 == 'n':
+                        pass
+                    else:
+                        if soma2 == 2 or soma2 == 3 or soma2 == 12:
+                            fichas = fichas + aposta6*7
+                            print('Você ganhou {0} fichas em Any Craps!'.format(7*aposta6))
+                        else:
+                            fichas = fichas - aposta6
+                            print('Você perdeu {0} fichas em Any Craps!'.format(aposta6))
                 
