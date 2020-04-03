@@ -150,6 +150,7 @@ while game_on:
                         else:
                             fichas = fichas - aposta6
                             print('Você perdeu {0} fichas em Any Craps!'.format(aposta6))
+                    #Twelve
                     if pergunta7 == 'n':
                         pass
                     else:
