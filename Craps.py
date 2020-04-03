@@ -1,4 +1,4 @@
-#Introdução
+#Introdução do Craps
 import random
 fichas = 1000
 game_on = True
