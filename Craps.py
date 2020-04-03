@@ -150,4 +150,25 @@ while game_on:
                         else:
                             fichas = fichas - aposta6
                             print('Você perdeu {0} fichas em Any Craps!'.format(aposta6))
+                    if pergunta7 == 'n':
+                        pass
+                    else:
+                        if soma2 == 12:
+                            fichas = fichas + aposta7*30
+                            print('Você ganhou {0} fichas em Twelve!'.format(aposta7*30))
+                        else:
+                            fichas = fichas - aposta7
+                            print('Você perdeu {0} fichas em Twelve!'.format(aposta7))
+                    if soma2 == 7:
+                        fichas = fichas - aposta1
+                        print('Você perdeu {0} fichas e sairá do Point!'.format(aposta1))
+                        break
+                    elif soma2 == soma1:
+                        fichas = fichas + aposta1
+                        print('Você ganhou {0} fichas e sairá do Point!'.format(aposta1))
+                        break
+                    if fichas <= 0:
+                        break
+        if fichas <= 0:
+            print('Ops! Você faliu amigão!')    
                 
