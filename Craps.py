@@ -1,3 +1,4 @@
+#Introdução
 import random
 fichas = 1000
 game_on = True
@@ -35,6 +36,8 @@ while game_on:
         print('No primeiro dado saiu o número {0}.'.format(dado1))
         print('No segundo dado saiu o número {0}.'.format(dado2))
         print('A soma dos dois dados é {0}.'.format(soma1))
+        
+        #Field
         if pergunta2 == 'n' or pergunta2 == 'não' :
             pass
         else:
@@ -50,6 +53,8 @@ while game_on:
             else:
                 fichas = fichas + 3*aposta2
                 print ('Você ganhou {0} fichas em Field!'.format(3*aposta2))
+
+        #Any Craps
         if pergunta3 == 'n' or pergunta3 == 'não':
             pass
         else:
@@ -59,6 +64,8 @@ while game_on:
             else:
                 fichas = fichas - aposta3
                 print('Você perdeu {0} fichas em Any Craps!'.format(aposta3))
+
+        #Twelve
         if pergunta4 == 'n' or pergunta4 == 'não':
             pass
         else:
