@@ -78,7 +78,7 @@ while game_on:
 
 
         if pergunta1 == 'n' and pergunta2 == 'n' and pergunta3 == 'n' and pergunta4 == 'n':
-            sair = (input('Você quer sair do jogo ou esperar a próxima rodada?(sair/esperar: '))
+            sair = (input('Você quer sair do jogo ou esperar a próxima rodada?(sair/esperar): '))
             if sair == 'sair':
                 print('Fim de Jogo')
                 break
